@@ -1,38 +1,23 @@
 ---
-status: testing
+status: complete
 phase: 09-implement-the-bug-001-fix-and-produce-an-upstream-pr-report
 source:
   - 09-01-SUMMARY.md
   - 09-02-SUMMARY.md
 started: 2026-03-14T10:58:33Z
-updated: 2026-03-14T10:58:33Z
+updated: 2026-03-14T11:49:00Z
 ---
 
 ## Current Test
 
-number: 1
-name: Upstream PR Report Reads as a Standalone Reviewer Brief
-expected: |
-Open `.planning/phases/09-implement-the-bug-001-fix-and-produce-an-upstream-pr-report/09-UPSTREAM-PR-REPORT.md`.
-
-You should be able to understand BUG-001 without rereading the full audit catalog first.
-The report should clearly contain:
-
-- `What Changed`
-- `Why`
-- `Steps to reproduce`
-- `Fix summary`
-- `Validation`
-
-The reproduction path should read like a maintainer-friendly workflow, not loose notes, and it should clearly explain both the vulnerable behavior and the value of the fix.
-awaiting: user response
+[testing complete]
 
 ## Tests
 
 ### 1. Upstream PR Report Reads as a Standalone Reviewer Brief
 
 expected: Open the BUG-001 PR report and confirm it is self-contained, reviewer-friendly, and clearly explains the vulnerable behavior, the fix, and the validation evidence.
-result: pending
+result: pass
 
 ### 2. In-Workspace Write Still Succeeds Through `projects.writeFile`
 
@@ -78,7 +63,7 @@ cat "$WORKSPACE/plans/uat-happy.txt"
 ```
 
 Expected result: the WebSocket response contains `result.relativePath: "plans/uat-happy.txt"` and the file exists inside the workspace with the exact contents `phase-9-happy-path`.
-result: pending
+result: pass
 
 ### 3. Symlink Escape Attempt Is Rejected Without Outside Mutation
 
@@ -127,14 +112,14 @@ EOF
 ```
 
 Expected result: the response contains an error message with `Workspace file path must stay within the project root.` and the printed `outside-exists` value is `false`.
-result: pending
+result: pass
 
 ## Summary
 
 total: 3
-passed: 0
+passed: 3
 issues: 0
-pending: 3
+pending: 0
 skipped: 0
 
 ## Gaps
