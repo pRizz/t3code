@@ -167,11 +167,19 @@ Plans:
 
 **Goal**: Implement the `projects.writeFile` symlink-escape fix and package the evidence into an upstream-ready PR report that proves the defect, the remediation, and the value of merging it.
 **Depends on**: Phase 8
-**Plans**: 0 plans
+**Requirements**: FIX-01, FIX-02
+**Success Criteria** (what must be TRUE):
+
+1. `projects.writeFile` rejects symlink-assisted escape attempts before mutating anything outside the workspace root.
+2. Regression coverage proves both the allowed in-workspace write path and the rejected symlink-escape path.
+3. Phase artifacts include an upstream-ready PR report with deterministic reproduction steps, impact summary, fix explanation, and post-fix verification evidence.
+
+**Plans**: 2 plans
 
 Plans:
 
-- [ ] TBD (run `$gsd-plan-phase 9` to break down)
+- [ ] 09-01: Implement canonical workspace write-path enforcement and regression tests
+- [ ] 09-02: Produce BUG-001 reproduction evidence and upstream PR report
 
 **Details:**
 Deliver the server-side fix for `BUG-001`, add regression coverage around workspace-boundary enforcement, and create a comprehensive PR report that shows the vulnerable setup, exact triggering steps, expected versus actual behavior, the implemented fix, and post-fix validation for a clear upstream pull request.
@@ -191,4 +199,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | 6. Initial Bug Catalog Assembly          | 0/2            | Not started | -         |
 | 7. Remediation Wave Design               | 0/2            | Not started | -         |
 | 8. Fix-Phase Sequencing and Handoff      | 0/2            | Not started | -         |
-| 9. Implement BUG-001 Fix and PR Report   | 0/1            | Not started | -         |
+| 9. Implement BUG-001 Fix and PR Report   | 0/2            | Not started | -         |

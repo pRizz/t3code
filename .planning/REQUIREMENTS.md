@@ -46,6 +46,11 @@
 - **AUTO-01**: Audit findings can be refreshed through a repeatable automated check suite
 - **AUTO-02**: High-priority bug classes have dedicated regression tests or monitoring after fixes land
 
+### High-Priority Remediation
+
+- [ ] **FIX-01**: `projects.writeFile` rejects any request whose canonical target escapes the workspace root through symlink traversal or ancestor resolution
+- [ ] **FIX-02**: BUG-001 remediation lands with regression coverage plus an upstream-ready report that includes deterministic reproduction steps, impact, fix summary, and validation evidence
+
 ## Out of Scope
 
 | Feature                                                     | Reason                                                                                 |
@@ -71,14 +76,16 @@
 | CATL-01     | Phase 6 | Pending |
 | CATL-02     | Phase 7 | Pending |
 | NEXT-01     | Phase 8 | Pending |
+| FIX-01      | Phase 9 | Pending |
+| FIX-02      | Phase 9 | Pending |
 
 **Coverage:**
 
-- v1 requirements: 13 total
-- Mapped to phases: 13
+- v1/v2 requirements: 15 total
+- Mapped to phases: 15
 - Unmapped: 0 ✓
 
 ---
 
 _Requirements defined: 2026-03-14_
-_Last updated: 2026-03-14 after initial definition_
+_Last updated: 2026-03-14 after Phase 9 remediation planning_
