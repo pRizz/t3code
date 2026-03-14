@@ -17,6 +17,20 @@ With the old behavior, a client could send a relative path like `linked-outside/
 
 That made BUG-001 a real workspace-boundary violation rather than a theoretical path-normalization issue.
 
+## Example exploitation situations if left unfixed
+
+### 1. Malicious repository content targets files outside the checked-out project
+
+Imagine a user opens a repository that already contains a symlinked directory such as `docs/latest -> ~/.ssh` or `cache/export -> /tmp/shared-state`. If an agent task, extension, or helper script inside T3 Code later asks `projects.writeFile` to update what looks like an ordinary in-repo file like `docs/latest/config` or `cache/export/build.log`, the vulnerable route would follow the symlink and write outside the repository.
+
+In that situation, the attacker does not need direct filesystem access to the victim's machine after the repository is cloned. They only need to shape repository contents so a later write lands in an attacker-chosen external location. The damage could range from overwriting user dotfiles to corrupting credentials, local tool configuration, or unrelated project files.
+
+### 2. A local integration or automation can be tricked into mutating another workspace
+
+Assume T3 Code is running on a developer workstation where another trusted local tool, script, or browser session can reach the WebSocket API and ask it to write files in the active workspace. If that workspace contains a symlink like `linked-outside -> ../other-project` or a link to a shared state directory, a seemingly safe write request such as `linked-outside/notes.md` would actually modify files outside the selected project root.
+
+That turns a project-scoped write capability into a broader local write primitive. Even when the caller believes it is only editing the current workspace, the vulnerable route silently expands its reach to sibling repositories or shared directories. The fix matters because it restores the security boundary the API contract implies: project writes stay inside the project.
+
 ## Steps to reproduce
 
 ### Preconditions
