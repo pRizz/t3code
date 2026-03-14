@@ -13,14 +13,14 @@ This roadmap turns the existing T3 Code repository into an evidence-backed bug d
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Audit Charter and Scope Rules** - Lock the discovery-only rules and establish how findings will be classified.
-- [ ] **Phase 2: Server Runtime and Provider Audit** - Audit the server, orchestration, transport, and provider lifecycle paths.
-- [ ] **Phase 3: Web and Desktop Surface Audit** - Audit user-visible client and desktop flows for correctness and UX issues.
-- [ ] **Phase 4: Data, Git, Tooling, and Release Audit** - Audit persistence, git/checkpointing, shared utilities, scripts, CI, and release/download paths.
-- [ ] **Phase 5: Evidence Validation and Gap Sweep** - Verify findings where feasible and document remaining blind spots honestly.
-- [ ] **Phase 6: Initial Bug Catalog Assembly** - Produce the canonical catalog of findings with consistent metadata.
-- [ ] **Phase 7: Remediation Wave Design** - Group findings into coherent later fix waves based on severity and subsystem.
-- [ ] **Phase 8: Fix-Phase Sequencing and Handoff** - Sequence later implementation phases once the catalog is complete.
+- [x] **Phase 1: Audit Charter and Scope Rules** - Lock the discovery-only rules and establish how findings will be classified.
+- [x] **Phase 2: Server Runtime and Provider Audit** - Audit the server, orchestration, transport, and provider lifecycle paths.
+- [x] **Phase 3: Web and Desktop Surface Audit** - Audit user-visible client and desktop flows for correctness and UX issues.
+- [x] **Phase 4: Data, Git, Tooling, and Release Audit** - Audit persistence, git/checkpointing, shared utilities, scripts, CI, and release/download paths.
+- [x] **Phase 5: Evidence Validation and Gap Sweep** - Verify findings where feasible and document remaining blind spots honestly.
+- [x] **Phase 6: Initial Bug Catalog Assembly** - Produce the canonical catalog of findings with consistent metadata.
+- [x] **Phase 7: Remediation Wave Design** - Group findings into coherent later fix waves based on severity and subsystem.
+- [x] **Phase 8: Fix-Phase Sequencing and Handoff** - Sequence later implementation phases once the catalog is complete.
 
 ## Phase Details
 
@@ -38,8 +38,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 
-- [ ] 01-01: Define audit scope, evidence standards, and classification rules
-- [ ] 01-02: Create discovery-only guardrails and artifact structure
+- [x] 01-01: Define audit scope, evidence standards, and classification rules
+- [x] 01-02: Create discovery-only guardrails and artifact structure
 
 ### Phase 2: Server Runtime and Provider Audit
 
@@ -55,9 +55,9 @@ Plans:
 
 Plans:
 
-- [ ] 02-01: Audit provider session, turn, and ingestion flows
-- [ ] 02-02: Audit orchestration, push bus, and readiness sequencing
-- [ ] 02-03: Validate server findings against tests and runtime commands where feasible
+- [x] 02-01: Audit provider session, turn, and ingestion flows
+- [x] 02-02: Audit orchestration, push bus, and readiness sequencing
+- [x] 02-03: Validate server findings against tests and runtime commands where feasible
 
 ### Phase 3: Web and Desktop Surface Audit
 
@@ -73,9 +73,9 @@ Plans:
 
 Plans:
 
-- [ ] 03-01: Audit web transport, store, routes, and chat UX logic
-- [ ] 03-02: Audit desktop bridge, lifecycle, and update behavior
-- [ ] 03-03: Validate client findings against browser/desktop-adjacent checks where feasible
+- [x] 03-01: Audit web transport, store, routes, and chat UX logic
+- [x] 03-02: Audit desktop bridge, lifecycle, and update behavior
+- [x] 03-03: Validate client findings against browser/desktop-adjacent checks where feasible
 
 ### Phase 4: Data, Git, Tooling, and Release Audit
 
@@ -91,9 +91,9 @@ Plans:
 
 Plans:
 
-- [ ] 04-01: Audit persistence, checkpointing, attachments, and git flows
-- [ ] 04-02: Audit shared utilities and repo scripts
-- [ ] 04-03: Audit CI, release, and download/update surfaces
+- [x] 04-01: Audit persistence, checkpointing, attachments, and git flows
+- [x] 04-02: Audit shared utilities and repo scripts
+- [x] 04-03: Audit CI, release, and download/update surfaces
 
 ### Phase 5: Evidence Validation and Gap Sweep
 
@@ -109,8 +109,8 @@ Plans:
 
 Plans:
 
-- [ ] 05-01: Run targeted validation commands and tie results to findings
-- [ ] 05-02: Record unresolved hypotheses and coverage gaps
+- [x] 05-01: Run targeted validation commands and tie results to findings
+- [x] 05-02: Record unresolved hypotheses and coverage gaps
 
 ### Phase 6: Initial Bug Catalog Assembly
 
@@ -126,8 +126,8 @@ Plans:
 
 Plans:
 
-- [ ] 06-01: Normalize findings into the canonical catalog format
-- [ ] 06-02: Review the catalog for consistency and missing metadata
+- [x] 06-01: Normalize findings into the canonical catalog format
+- [x] 06-02: Review the catalog for consistency and missing metadata
 
 ### Phase 7: Remediation Wave Design
 
@@ -143,8 +143,8 @@ Plans:
 
 Plans:
 
-- [ ] 07-01: Group bugs into remediation clusters
-- [ ] 07-02: Attach phase-oriented priority rationale to each cluster
+- [x] 07-01: Group bugs into remediation clusters
+- [x] 07-02: Attach phase-oriented priority rationale to each cluster
 
 ### Phase 8: Fix-Phase Sequencing and Handoff
 
@@ -160,8 +160,8 @@ Plans:
 
 Plans:
 
-- [ ] 08-01: Define the first remediation phase candidates
-- [ ] 08-02: Create execution handoff from catalog to fix planning
+- [x] 08-01: Define the first remediation phase candidates
+- [x] 08-02: Create execution handoff from catalog to fix planning
 
 ### Phase 9: Implement the BUG-001 Fix and Produce an Upstream PR Report
 
@@ -178,8 +178,8 @@ Plans:
 
 Plans:
 
-- [ ] 09-01: Implement canonical workspace write-path enforcement and regression tests
-- [ ] 09-02: Produce BUG-001 reproduction evidence and upstream PR report
+- [x] 09-01: Implement canonical workspace write-path enforcement and regression tests
+- [x] 09-02: Produce BUG-001 reproduction evidence and upstream PR report
 
 **Details:**
 Deliver the server-side fix for `BUG-001`, add regression coverage around workspace-boundary enforcement, and create a comprehensive PR report that shows the vulnerable setup, exact triggering steps, expected versus actual behavior, the implemented fix, and post-fix validation for a clear upstream pull request.
@@ -189,14 +189,16 @@ Deliver the server-side fix for `BUG-001`, add regression coverage around worksp
 **Execution Order:**
 Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9
 
-| Phase                                    | Plans Complete | Status      | Completed |
-| ---------------------------------------- | -------------- | ----------- | --------- |
-| 1. Audit Charter and Scope Rules         | 0/2            | Not started | -         |
-| 2. Server Runtime and Provider Audit     | 0/3            | Not started | -         |
-| 3. Web and Desktop Surface Audit         | 0/3            | Not started | -         |
-| 4. Data, Git, Tooling, and Release Audit | 0/3            | Not started | -         |
-| 5. Evidence Validation and Gap Sweep     | 0/2            | Not started | -         |
-| 6. Initial Bug Catalog Assembly          | 0/2            | Not started | -         |
-| 7. Remediation Wave Design               | 0/2            | Not started | -         |
-| 8. Fix-Phase Sequencing and Handoff      | 0/2            | Not started | -         |
-| 9. Implement BUG-001 Fix and PR Report   | 0/2            | Not started | -         |
+Phases 1-8 were satisfied by the initial audit, catalog, and planning artifact set created on 2026-03-14. Phase 9 executed the first concrete remediation/reporting follow-up and closes this milestone.
+
+| Phase                                    | Plans Complete | Status   | Completed  |
+| ---------------------------------------- | -------------- | -------- | ---------- |
+| 1. Audit Charter and Scope Rules         | 2/2            | Complete | 2026-03-14 |
+| 2. Server Runtime and Provider Audit     | 3/3            | Complete | 2026-03-14 |
+| 3. Web and Desktop Surface Audit         | 3/3            | Complete | 2026-03-14 |
+| 4. Data, Git, Tooling, and Release Audit | 3/3            | Complete | 2026-03-14 |
+| 5. Evidence Validation and Gap Sweep     | 2/2            | Complete | 2026-03-14 |
+| 6. Initial Bug Catalog Assembly          | 2/2            | Complete | 2026-03-14 |
+| 7. Remediation Wave Design               | 2/2            | Complete | 2026-03-14 |
+| 8. Fix-Phase Sequencing and Handoff      | 2/2            | Complete | 2026-03-14 |
+| 9. Implement BUG-001 Fix and PR Report   | 2/2            | Complete | 2026-03-14 |
