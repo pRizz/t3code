@@ -5,20 +5,21 @@
 See: `.planning/PROJECT.md` (updated 2026-03-14)
 
 **Core value:** Produce a bug catalog that is accurate enough to drive later remediation phases without guessing about where the real correctness, reliability, security, and UX risks are.
-**Current focus:** Phase 1: Audit Charter and Scope Rules
+**Current focus:** Transition from Phase 6 to Phase 7: initial catalog is complete, remediation planning is next
 
 ## Current Position
 
-Phase: 1 of 8 (Audit Charter and Scope Rules)
+Phase: 7 of 8 (Remediation Wave Design is next)
 Plan: 0 of 2 in current phase
-Status: In progress
-Last activity: 2026-03-14 — Initialized audit project context, requirements, roadmap, and state for a discovery-first bug catalog milestone
+Status: Ready for next planning step
+Last activity: 2026-03-14 — Completed the initial bug catalog with confirmed security, transport, UX, and packaging findings across the codebase
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [███████░░░] 75%
 
 ## Performance Metrics
 
 **Velocity:**
+
 - Total plans completed: 0
 - Average duration: -
 - Total execution time: 0.0 hours
@@ -26,10 +27,11 @@ Progress: [░░░░░░░░░░] 0%
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| - | - | - | - |
+| ----- | ----- | ----- | -------- |
+| -     | -     | -     | -        |
 
 **Recent Trend:**
+
 - Last 5 plans: -
 - Trend: Stable
 
@@ -45,14 +47,15 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-None yet.
+- Decide which finding cluster becomes the first remediation phase.
+- Convert the highest-risk findings into `$gsd-plan-phase` execution work after catalog review.
 
 ### Blockers/Concerns
 
-- Comprehensive coverage will require balancing static inspection with targeted verification so findings stay credible without pretending the entire product was exhaustively exercised live.
+- The catalog is evidence-backed, but some live-provider and packaged-update paths remain environment-gated and should stay labeled as verification gaps until exercised.
 
 ## Session Continuity
 
 Last session: 2026-03-14 04:00
-Stopped at: Project initialization completed; next step is the actual deep bug audit and catalog assembly
+Stopped at: Initial bug catalog completed; next step is choosing the first remediation cluster and planning that phase
 Resume file: None

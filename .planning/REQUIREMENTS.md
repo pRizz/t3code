@@ -48,35 +48,37 @@
 
 ## Out of Scope
 
-| Feature | Reason |
-|---------|--------|
-| Implementing fixes during initialization | This milestone is discovery-first; fixing begins after the catalog is reviewed |
-| New feature ideation unrelated to discovered defects | The user asked for an audit baseline, not product expansion |
+| Feature                                                     | Reason                                                                                 |
+| ----------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Implementing fixes during initialization                    | This milestone is discovery-first; fixing begins after the catalog is reviewed         |
+| New feature ideation unrelated to discovered defects        | The user asked for an audit baseline, not product expansion                            |
 | Exhaustive live end-to-end manual QA across every user flow | Too large for initialization; this audit should document remaining blind spots instead |
 
 ## Traceability
 
-| Requirement | Phase | Status |
-|-------------|-------|--------|
-| SCOP-01 | Phase 1 | Pending |
-| SCOP-02 | Phase 1 | Pending |
-| SERV-01 | Phase 2 | Pending |
-| SERV-02 | Phase 2 | Pending |
-| CLNT-01 | Phase 3 | Pending |
-| CLNT-02 | Phase 3 | Pending |
-| DATA-01 | Phase 4 | Pending |
-| TOOL-01 | Phase 4 | Pending |
-| QUAL-01 | Phase 5 | Pending |
-| QUAL-02 | Phase 5 | Pending |
-| CATL-01 | Phase 6 | Pending |
-| CATL-02 | Phase 7 | Pending |
-| NEXT-01 | Phase 8 | Pending |
+| Requirement | Phase   | Status  |
+| ----------- | ------- | ------- |
+| SCOP-01     | Phase 1 | Pending |
+| SCOP-02     | Phase 1 | Pending |
+| SERV-01     | Phase 2 | Pending |
+| SERV-02     | Phase 2 | Pending |
+| CLNT-01     | Phase 3 | Pending |
+| CLNT-02     | Phase 3 | Pending |
+| DATA-01     | Phase 4 | Pending |
+| TOOL-01     | Phase 4 | Pending |
+| QUAL-01     | Phase 5 | Pending |
+| QUAL-02     | Phase 5 | Pending |
+| CATL-01     | Phase 6 | Pending |
+| CATL-02     | Phase 7 | Pending |
+| NEXT-01     | Phase 8 | Pending |
 
 **Coverage:**
+
 - v1 requirements: 13 total
 - Mapped to phases: 13
 - Unmapped: 0 ✓
 
 ---
-*Requirements defined: 2026-03-14*
-*Last updated: 2026-03-14 after initial definition*
+
+_Requirements defined: 2026-03-14_
+_Last updated: 2026-03-14 after initial definition_

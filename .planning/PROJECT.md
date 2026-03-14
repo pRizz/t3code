@@ -48,13 +48,14 @@ Produce a bug catalog that is accurate enough to drive later remediation phases 
 
 ## Key Decisions
 
-| Decision | Rationale | Outcome |
-|----------|-----------|---------|
-| Treat this as a brownfield audit initiative rather than a feature milestone | The repo already exists and the user wants discovery before action | — Pending |
-| Skip external domain-ecosystem research during initialization | The current milestone is about the repo's actual code and behavior, not market/domain exploration | — Pending |
-| Separate confirmed bugs, high-confidence likely bugs, and open verification gaps in the catalog | This avoids overstating certainty while still surfacing likely risks | — Pending |
-| Defer bug fixes to later phases after the initial catalog is complete | The user explicitly wants the initial catalog first and remediation sequencing second | — Pending |
-| Commit planning and audit artifacts to git | The catalog should remain versioned and reviewable as a planning baseline | — Pending |
+| Decision                                                                                        | Rationale                                                                                         | Outcome   |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --------- |
+| Treat this as a brownfield audit initiative rather than a feature milestone                     | The repo already exists and the user wants discovery before action                                | — Pending |
+| Skip external domain-ecosystem research during initialization                                   | The current milestone is about the repo's actual code and behavior, not market/domain exploration | — Pending |
+| Separate confirmed bugs, high-confidence likely bugs, and open verification gaps in the catalog | This avoids overstating certainty while still surfacing likely risks                              | — Pending |
+| Defer bug fixes to later phases after the initial catalog is complete                           | The user explicitly wants the initial catalog first and remediation sequencing second             | — Pending |
+| Commit planning and audit artifacts to git                                                      | The catalog should remain versioned and reviewable as a planning baseline                         | — Pending |
 
 ---
-*Last updated: 2026-03-14 after initialization*
+
+_Last updated: 2026-03-14 after initialization_
